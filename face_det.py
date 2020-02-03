@@ -10,7 +10,7 @@ def detect(frame):
     faces = face_cascade.detectMultiScale(gray, 1.3, 5) #faces tapıllardan oluşuyor,bunlarda koor. olan x ve y var.
     for(x,y,w,h) in faces:        #w genişlik,h yükselik , x y koordinat
         cv2.rectangle(frame, (x,y),(x+w,y+h),(255,0,0),2)  #RGB kodları 255 0 0 yani red green blue. 0 hiç olmadığı 255 ise tam olduğu anlamına gelir.
-        # 2 ise ikdötgenlerin kalınlığı. x+w y+h sağ alta köşe koordinat.
+        # 2 ise dikdörtgenlerin kalınlığı. x+w y+h sağ alta köşe koordinat.
         gray_face = gray[y:y+h,x:x+w] #y den y+h a kadar olan bölgeyi alma
         color_face = frame[y:y+h,x:x+w]
         eyes = eye_cascade.detectMultiScale(gray_face,1.1,3)
