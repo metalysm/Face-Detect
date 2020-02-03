@@ -18,7 +18,7 @@ def detect(frame):
             cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
     return frame
 
-# Proje klasörü içerisindeki image.jpg dosyasında yüz ve göz tesbiti yapılıyor.
+# Proje klasörü içerisindeki image.jpg dosyasında yüz ve göz tespiti yapılıyor.
 # Daha sonra cikis.jpg dosyasına yazılıyor.
 # Dosya isimlerini değiştirebilirsiniz.
 image = imageio.imread('2.jpeg')
